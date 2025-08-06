@@ -1,0 +1,1748 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 200px;
+  background-color: rgb(53, 45, 45);
+  position: relative;
+  bottom: 10px;
+  height: 100px;
+  width: 1365px;
+  margin-bottom: 260px;
+ 
+}
+
+.logo .texto_logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding-top: 28px;
+  margin-left: 150px;
+  
+}
+
+.texto_home {
+
+  color: rgb(204, 198, 198);
+}
+
+.texto_home:hover {
+
+  color: white;
+}
+
+
+.menu li {
+  cursor: pointer;
+}
+
+
+.fast {
+
+  color: rgb(255, 255, 255);
+}
+
+
+.container_pesquisar {
+
+  width: 45px;
+  height: 42px;
+  background-color: rgb(82, 79, 79);
+  position: relative;
+  top: 34px;
+  right: 10px;
+  border-radius: 12px;
+}
+
+.icone_pesquisar {
+
+  margin-top: 45px;
+  margin-right: 30px;
+  display: block;
+  position: relative;
+  bottom: 34px;
+  left: 11px;
+
+}
+
+.icone_carrinho {
+
+  margin-top: 42px;
+  margin-right: 10px;
+
+}
+
+.icone_conta {
+
+  margin-top: 42px;
+  margin-right: 40px;
+}
+
+.input_barra input{
+
+  margin-top: 34px;
+  margin-left: 60px;
+  height: 39px;
+  width: 280px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding-left: 8px;
+  display: block;
+
+}
+
+.texto_input {
+
+  color: black;
+}
+
+.container_anuncio {
+
+  background-color: rgb(255, 255, 255);
+  height: 890px;
+  width: 1366px;
+  position: relative;
+  bottom: 482px;
+  border: none;
+}
+
+.text_publi {
+
+  color: black;
+  text-align: center;
+  padding-top: 80px;
+  font-weight:600;
+  font-size: 120px;
+  font-family: "Poppins", sans-serif;
+
+
+}
+
+.subtext_publi {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  position: relative;
+  bottom: 110px;
+  text-align: center;
+
+}
+
+.imagem_macbook_publi {
+  margin-left: 350px;
+  position: relative;
+  bottom: 70px;
+}
+
+.botao_publi {
+
+  margin-left: 580px;
+  position: relative;
+  bottom: 40px;
+  width: 180px;
+}
+
+.botao_publi button {
+  height: 62px;
+  width: 180px;
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.botao_publi button:hover {
+
+  background-color: rgb(59, 57, 57);
+  color: white;
+  transition: backgound-color ease 0.5s;
+}
+
+
+.container_categoria {
+
+  position: absolute;
+
+  top: 1000px;
+
+
+}
+
+.itens_categorias {
+
+  display: flex;
+
+  gap: 140px;
+
+  padding-left: 90px;
+
+  padding-top: 70px;
+
+
+}
+
+.itens_categorias p {
+
+
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+
+}
+
+.filtragem_categorias {
+
+  padding-left: 86px;
+  font-weight: 500;
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.imagem_celular_categoria {
+
+  margin-top: 5px;
+  margin-left: 25px;
+}
+
+
+.container_celular {
+
+  background-color: rgb(255, 255, 255);
+  height: 150px;
+  width: 120px;
+  color: black;
+  margin-bottom: 120px;
+  border-radius: 12px;
+  font-weight: 600;
+  padding-top: 25px;
+}
+
+.texto_celular {
+
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding-top: 24px;
+  font-size: 12px;
+}
+
+.texto_computador {
+
+  padding-top: 26px;
+}
+
+.container_relogio {
+
+  background-color: rgb(255, 255, 255);
+  height: 150px;
+  width: 120px;
+  color: black;
+  margin-bottom: 120px;
+  border-radius: 12px;
+  overflow-y: hidden;
+  font-weight: 600;
+  position: relative;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;  
+
+}
+
+.container_camera {
+
+  background-color: rgb(255, 255, 255);
+  height: 150px;
+  width: 120px;
+  color: black;
+  margin-bottom: 120px;
+  border-radius: 12px;
+  overflow-y: hidden;
+  font-weight: 600;
+  position: relative;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px; 
+
+}
+
+.container_computador {
+
+  background-color: rgb(255, 255, 255);
+  height: 150px;
+  width: 120px;
+  color: black;
+  margin-bottom: 120px;
+  border-radius: 12px;
+  overflow-y: hidden;
+  font-weight: 600;
+  position: relative;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;  
+
+}
+
+.container_gaming {
+
+  background-color: rgb(255, 255, 255);
+  height: 100px;
+  width: 120px;
+  color: black;
+  margin-bottom: 120px;
+  border-radius: 12px;
+
+}
+
+.texto_relogio {
+
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding-top: 35px;
+  font-size: 14px;
+
+}
+
+.imagem_relogio_categoria{
+
+ 
+  position: relative;
+
+  bottom: 190%;
+
+}
+
+.texto_camera {
+
+  padding-top: 48px;
+}
+
+.container_gaming {
+
+  background-color: rgb(255, 255, 255);
+  height: 164px;
+  width: 120px;
+  color: black;
+  margin-bottom: 120px;
+  border-radius: 12px;
+  overflow-y: hidden;
+  font-weight: 600;
+  position: relative;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px; 
+}
+
+.texto_gaming {
+
+  padding-top: 26px;
+}
+
+.icone_navegacao {
+
+  padding-left: 96%;
+}
+
+.seta {
+
+  display: flex;
+}
+
+.container_produtos {
+
+  background-color: white;
+  height: 190px;
+  display: flex;
+  gap: 330px;
+  padding-left: 120px;
+  padding-top: 120px;
+}
+
+.texto_lancamento {
+
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.texto_lancamento:hover{
+
+    background-color: rgb(59, 57, 57);
+    color: white;
+
+}
+
+.texto_vendidos {
+
+  color: black;
+  background-color: white;
+  border-color: black;
+
+}
+
+.texto_vendidos:hover {
+
+    background-color: rgb(59, 57, 57);
+    color: white;
+
+}
+
+.texto_ofertas {
+
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+
+.texto_ofertas:hover {
+
+  background-color: rgb(59, 57, 57);
+  color: white;
+
+}
+
+.container_itens {
+
+  height: 780px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  overflow-x: hidden;
+}
+
+
+@keyframes subirDescer {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+
+.icone_like_prod1 {
+
+  margin-left: 10px;
+  margin-top: 7px;
+  z-index: 8;
+  color: white;
+}
+
+.icone_like_prod1:hover {
+  animation: subirDescer 0.4s ease-in-out infinite;
+}
+
+
+
+@keyframes girarSuave {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+
+.icone_cart_prod1 {
+
+  position: relative;
+  left: 12px;
+  top: 10px;
+
+}
+
+.icone_cart_prod1:hover {
+
+  animation: girarSuave 1s ease-in-out infinite alternate;
+
+}
+
+.container_cart_prod1 {
+  background-color: rgb(197, 191, 191);
+  width: 56px;
+  height: 48px;
+  position: relative;
+  left: 145px;
+  bottom: 46px;
+  border-bottom-left-radius: 12px;
+
+
+}
+
+.container_like_prod1 {
+
+  background-color: rgb(0, 0, 0);
+  width: 50px;
+  height: 45px;
+  border-left: 20px;
+  border-bottom-right-radius: 12px;
+
+}
+
+
+
+.produto1 {
+
+  margin-left: 110px;
+  margin-bottom: 1px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 200px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+
+}
+
+.produto1 img{
+
+  height: 120px;
+  margin-left: 40px;
+  position: relative;
+  bottom: 36px;
+}
+
+.produto1 p{
+
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  left: 18px;
+  position: relative;
+  bottom: 40px;
+
+}
+
+.container_itens .texto_iphone_roxo {
+  padding-left: 30px;
+}
+
+.botao_iphone_roxo {
+  margin-left: 14px;
+  margin-top: -40px;
+}
+
+.botao_camera_preta {
+  margin-left: 15px;
+  margin-top: -40px;
+}
+
+.botao_relogio_cinza {
+
+  position: relative;
+  left: 14px;
+  bottom: 43px;
+}
+
+.botao_relogio_cinza button {
+
+  width: 170px;
+
+}
+
+.botao_iphone_roxo button {
+
+  width: 170px;
+
+}
+
+.botao_camera_preta button {
+
+  width: 170px;
+
+}
+
+.botao_iphone_roxo button p{
+
+  color: white;
+}
+
+.botao_iphone_roxo button:hover {
+
+  background-color: rgb(20, 18, 18);
+}
+
+.container_cart_prod2 {
+  background-color: rgb(197, 191, 191);
+  width: 56px;
+  height: 48px;
+  position: relative;
+  left: 145px;
+  bottom: 46px;
+  border-bottom-left-radius: 12px;
+
+
+}
+
+.icone_cart_prod2 {
+
+  position: relative;
+  left: 12px;
+  top: 10px;
+
+}
+
+.icone_cart_prod2:hover {
+
+  animation: girarSuave 1s ease-in-out infinite alternate;
+}
+
+
+
+.icone_like_prod2 {
+
+  margin-left: 10px;
+  margin-top: 2px;
+  z-index: 8;
+  color: white;
+}
+
+.icone_like_prod2:hover {
+    animation: subirDescer 0.4s ease-in-out infinite;
+}
+
+
+.container_like_prod2 {
+
+  background-color: rgb(0, 0, 0);
+  width: 50px;
+  height: 45px;
+  border-left: 20px;
+  border-bottom-right-radius: 12px;
+
+}
+
+
+.produto2 {
+  margin-left: 110px;
+  margin-bottom: 1px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 200px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+}
+
+.produto2 p{
+
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  left: 40px;
+  bottom: 40px;
+}
+
+.produto2 img{
+
+  margin-left: 37px;
+  position: relative;
+  bottom: 35px;
+  width: 120px;
+}
+
+.texto_ipad_silver {
+
+  margin-left: 9px;
+  margin-top: -3px;
+  
+}
+
+.botao_ipad_silver {
+
+  margin-left: 17px;
+  margin-top: 26px;
+}
+
+.bold_ipad {
+
+  font-weight: 620;
+}
+
+.text_bold_iphone{
+
+  font-weight: 620;
+
+}
+
+.texto_applewatch_aluminium {
+
+  margin-right: 14px;
+}
+
+
+
+.container_cart_prod3 {
+  background-color: rgb(197, 191, 191);
+  width: 56px;
+  height: 48px;
+  position: relative;
+  left: 145px;
+  bottom: 46px;
+  border-bottom-left-radius: 12px;
+
+
+}
+
+.icone_cart_prod3 {
+
+  position: relative;
+  left: 12px;
+  top: 10px;
+
+}
+
+.icone_cart_prod3:hover {
+
+  animation: girarSuave 1s ease-in-out infinite alternate;
+  
+}
+
+
+.icone_like_prod3 {
+
+  margin-left: 10px;
+  margin-top: 7px;
+  z-index: 8;
+  color: white;
+}
+
+.icone_like_prod3:hover {
+
+  animation: subirDescer 0.4s ease-in-out infinite;
+
+}
+
+.container_like_prod3 {
+
+  background-color: rgb(0, 0, 0);
+  width: 50px;
+  height: 45px;
+  border-left: 20px;
+  border-bottom-right-radius: 12px;
+}
+
+
+
+.produto3{
+
+  margin-left: 110px;
+  margin-bottom: 1px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 200px;
+  border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+
+}
+
+.produto3 img {
+
+  width: 120px;
+  position: relative;
+  left: 37px;
+  bottom: 45px;
+
+}
+
+.produto3 p {
+
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  left: 30px;
+  bottom: 50px;
+}
+
+
+
+
+.container_cart_prod4 {
+  background-color: rgb(197, 191, 191);
+  width: 56px;
+  height: 48px;
+  position: relative;
+  left: 145px;
+  bottom: 46px;
+  border-bottom-left-radius: 12px;
+
+
+}
+
+.icone_cart_prod4 {
+
+  position: relative;
+  left: 12px;
+  top: 10px;
+
+}
+
+.icone_cart_prod4:hover {
+
+  animation: girarSuave 1s ease-in-out infinite alternate;
+
+}
+
+
+
+.icone_like_prod4 {
+
+  margin-left: 10px;
+  margin-top: 7px;
+  z-index: 8;
+  color: white;
+}
+
+.icone_like_prod4:hover{
+
+  animation: subirDescer 0.4s ease-in-out infinite;
+}
+
+.container_like_prod4 {
+
+  background-color: rgb(0, 0, 0);
+  width: 50px;
+  height: 45px;
+  border-left: 20px;
+  border-bottom-right-radius: 12px;
+}
+
+
+.produto4 {
+
+  margin-left: 110px;
+  margin-bottom: 1px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 200px;
+  border-radius: 12px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+}
+
+.produto4 img {
+
+  width: 120px;
+  position: relative;
+  left: 40px;
+  bottom: 40px;
+
+}
+
+
+.produto4 p {
+
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  left: 10px;
+  bottom: 50px;
+}
+
+.galaxy_watch {
+
+  margin-left: 40px;
+
+}
+
+.produto5 {
+
+  margin-left: 110px;
+  margin-bottom: 70px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 200px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+}
+
+
+.produto5 img {
+
+  width: 120px;
+  position: relative;
+  left: 37px;
+  bottom: 40px;
+
+}
+
+
+.produto5 p {
+
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  left: 40px;
+  bottom: 40px;
+
+}
+
+.texto_fone_cinza {
+
+  margin-left: 20px;
+}
+
+.produto4 .texto_camera_preta {
+
+  position: relative;
+  left: 30%;
+}
+
+
+.container_cart_prod6 {
+  background-color: rgb(207, 201, 201);
+  width: 56px;
+  height: 45px;
+  position: relative;
+  left: 180px;
+  bottom: 170px;
+  border-radius: 12px;
+  border: 1px solid rgba(37, 36, 36, 0.404);
+
+
+}
+
+.icone_cart_prod6 {
+
+  position: relative;
+  left: 12px;
+  top: 7px;
+
+}
+
+.icone_cart_prod6:hover {
+
+    animation: girarSuave 1s ease-in-out infinite alternate;
+
+}
+
+
+
+.icone_like_prod6 {
+
+  margin-left: 10px;
+  margin-top: 7px;
+  z-index: 8;
+  color: white;
+}
+
+.icone_like_prod6:hover {
+  animation: subirDescer 0.4s ease-in-out infinite;
+
+}
+
+.container_like_prod6 {
+
+  background-color: rgb(0, 0, 0);
+  width: 50px;
+  height: 45px;
+  border-left: 20px;
+  border-bottom-right-radius: 12px;
+}
+
+.produto6 {
+
+  margin-left: 110px;
+  margin-bottom: 70px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 250px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+}
+
+.produto6 img {
+
+  position: relative;
+  bottom: 15%;
+  left: 4%;
+  width: 220px;
+}
+
+.produto6 p {
+
+  font-size: 20px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  padding-left: 64px;
+  position: relative;
+  bottom: 100px;
+}
+.produto6 .texto_notebook_preto {
+
+  margin-left: 30px;
+  position: relative;
+  bottom: 35%;
+  right: 1%;
+  font-size: 16px;
+}
+
+.botao_fone_cinza {
+
+  position: relative;
+  left: 28px;
+  bottom: 40px;
+}
+
+.produto6 .botao_notebook_red {
+
+  margin-left: 17px;
+  position: relative;
+  bottom: 124px;
+  right: 8px;
+}
+
+.botao_notebook_red button{
+
+  width: 160px;
+}
+
+.container_cart_prod7 {
+  background-color: rgb(207, 201, 201);
+  width: 56px;
+  height: 45px;
+  position: relative;
+  left: 180px;
+  bottom: 170px;
+  border-radius: 12px;
+  border: 1px solid rgba(37, 36, 36, 0.404);
+
+
+}
+
+
+.icone_cart_prod7 {
+
+  position: relative;
+  left: 12px;
+  top: 7px;
+
+}
+
+.icone_cart_prod7:hover{
+
+    animation: girarSuave 1s ease-in-out infinite alternate;
+}
+
+
+.container_like_prod7 {
+  background-color: rgb(0, 0, 0);
+  width: 50px;
+  height: 45px;
+  border-left: 20px;
+  border-bottom-right-radius: 12px;
+}
+
+.icone_like_prod7 {
+
+  margin-left: 10px;
+  margin-top: 7px;
+  z-index: 8;
+  color: white;
+}
+
+.icone_like_prod7:hover {
+
+  animation: subirDescer 0.4s ease-in-out infinite;
+
+}
+
+
+.container_cart_prod8 {
+  background-color: rgb(207, 201, 201);
+  width: 56px;
+  height: 45px;
+  position: relative;
+  left: 143px;
+  bottom: 297px;
+  border-bottom-left-radius: 12px;
+  border: 1px solid rgba(37, 36, 36, 0.404);
+
+
+}
+
+
+.icone_cart_prod8 {
+
+  position: relative;
+  left: 12px;
+  top: 7px;
+
+}
+
+.icone_cart_prod8:hover{
+
+  animation: girarSuave 1s ease-in-out infinite alternate;
+
+}
+
+
+.container_like_prod8 {
+  background-color: rgb(0, 0, 0);
+  width: 50px;
+  height: 45px;
+  border-left: 20px;
+  border-bottom-right-radius: 12px;
+}
+
+.icone_like_prod8 {
+
+  margin-left: 10px;
+  margin-top: 7px;
+  z-index: 8;
+  color: white;
+}
+
+.icone_like_prod8:hover{
+    animation: subirDescer 0.4s ease-in-out infinite;
+
+}
+
+
+
+
+
+
+
+
+
+.produto7 {
+
+  margin-left: 60px;
+  margin-bottom: 70px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 250px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+}
+
+
+.produto7 img {
+
+  position: relative;
+  bottom: 15%;
+  left: 4%;
+  width: 220px;
+}
+
+
+
+
+.produto7 p {
+
+  font-size: 20px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  padding-left: 50px;
+  position: relative;
+  bottom: 100px;
+}
+.produto7 .texto_notebook_verde {
+
+  margin-left: 30px;
+  position: relative;
+  bottom: 35%;
+  left: 4%;
+  font-size: 16px;
+}
+
+.produto7 .botao_notebook_verde {
+
+  margin-left: 17px;
+  position: relative;
+  bottom: 124px;
+  right: 8px;
+}
+
+
+.botao_notebook_verde button{
+
+  margin-right: 10px;
+  position: relative;
+  bottom: 1px;
+  width: 160px;
+}
+
+.botao_relogio_verde button{
+
+  position: relative;
+  left: 28px;
+  top: 9px;
+}
+
+
+
+.produto8 {
+
+  margin-left: 60px;
+  margin-bottom: 70px;
+  background-color: #e4d9d9;
+  height: 320px;
+  width: 200px;
+  border-radius: 12px;
+  border: 1px solid rgb(156, 146, 146);
+
+}
+
+.produto8 img {
+
+  width: 120px;
+  position: relative;
+  left: 37px;
+  bottom: 2px;
+}
+
+
+
+.produto8 p {
+
+  font-size: 13px;
+  color: rgb(3, 3, 3);
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  left: 20px;
+  bottom: 1px;
+
+}
+
+.produto8 .texto_relogio_verde {
+
+  margin-left: 30px;
+  position: relative;
+  top: 1%;
+  left: 18%;
+  font-size: 13px;
+}
+
+.botao_notebook_verde {
+
+  
+  margin-left: 60px;
+  position: relative;
+  bottom: 80px;
+}
+
+
+
+.container_banner {
+
+  height: 260px;
+  width: 1400px;
+  background-color: rgb(26, 24, 24);
+  margin-bottom: 190px;
+}
+
+.mockup_iphone{
+
+  width: 250px;
+  margin-top: 23px;
+  margin-left: 4px;
+
+}
+
+.mockup_macbook{
+
+  width: 280px;
+  height: 190px;
+  margin-left: 840px;
+}
+
+
+.iphone2_mockup{
+
+  width: 250px;
+  height: 200px;
+  margin-left: 180px;
+  position: relative;
+  bottom: 210px;
+
+}
+
+.iphone15_mockup{
+  position: relative;
+  left: 310px;
+}
+
+.watch_mockup{
+  width: 230px;
+  position: relative;
+  bottom: 220px;
+  left: 530px;
+
+}
+
+.texto_banner {
+
+  position: relative;
+  bottom: 410px;
+  left: 364px;
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.subtexto_banner {
+
+  position: relative;
+  bottom: 2px;
+  left: 50px;
+  font-size: 15px;
+}
+
+.botao_banner {
+
+  margin-left: 210px;
+  margin-top: 18px;
+  width: 200px;
+  font-size: 18px;
+  background-color: rgb(180, 174, 174);
+  color: rgb(0, 0, 0);
+
+}
+
+.botao_banner button{
+
+  height: 42px;
+}
+
+.botao_banner:hover {
+
+  background-color: rgb(212, 208, 208);
+}
+
+@media (max-width: 1024px) {
+  .text_publi {
+    font-size: 72px;
+  }
+
+  .imagem_macbook_publi {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .botao_publi {
+    margin: 20px auto;
+  }
+
+  .produto1, .produto2, .produto3, .produto4,
+  .produto5, .produto6, .produto7, .produto8 {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .produto1, .produto2, .produto3, .produto4,
+  .produto5, .produto6, .produto7, .produto8 {
+    width: 90%;
+  }
+
+  .text_publi {
+    font-size: 42px;
+    padding: 20px;
+  }
+
+  .imagem_macbook_publi {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .text_publi {
+    font-size: 28px;
+    padding: 10px;
+  }
+
+  .subtext_publi {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .input_barra input {
+    max-width: 90%;
+  }
+
+  .icones {
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .produto1, .produto2, .produto3, .produto4,
+  .produto5, .produto6, .produto7, .produto8 {
+    width: 100%;
+  }
+
+  .container_banner {
+    flex-direction: column;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .texto_banner {
+    font-size: 20px;
+    text-align: center;
+    position: static;
+  }
+}
+
+.ofertas_texto {
+
+  height: 90px;
+}
+
+
+.ofertas_texto p{
+
+  position: relative;
+  left: 300px;
+  bottom: 100px;
+  font-size: 26px;
+  font-weight: 600;
+
+
+}
+
+.ofertas_subtexto {
+
+  color: rgb(8, 243, 8);
+}
+
+.ofertas_texto .ofertas_texto2 {
+
+  position: relative;
+  left: 500px;
+}
+
+
+.container_footer {
+
+  background-color: #1a1717;
+  height: 390px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+.container_footer p{
+
+  position: relative;
+  left: 600px;
+  top: 40px;
+  font-size: 24px;
+  font-weight: 600;
+
+}
+
+.container_footer .subtexto_footer {
+
+  position: relative;
+  left: 360px;
+  top: 40px;
+  font-size: 18px;
+}
+
+
+.container_googleplay {
+
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  color: black;
+  margin-left: 460px;
+  margin-top: 70px;
+  border-radius: 12px;
+}
+
+.container_googleplay p{
+  position: relative;
+  left: 61px;
+  top: 10px;
+  width: 190px;
+  font-size: 20px;
+}
+
+.icone_google {
+
+  position: relative;
+  bottom: 45px;
+  left: 16px;
+}
+
+
+.container_applestore {
+
+  
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  color: black;
+  position: relative;
+  left: 680px;
+  bottom: 70px;
+  border-radius: 12px;
+
+}
+
+
+.container_applestore p{
+  position: relative;
+  left: 61px;
+  top: 10px;
+  width: 190px;
+  font-size: 20px;
+}
+
+.icone_apple {
+
+  position: relative;
+  bottom: 45px;
+  left: 15px;
+}
+
+
+.objetivo_footer p{
+
+  font-size: 15px;
+  position: relative;
+  top: -40px;
+  left: 330px;
+}
+
+
+.objetivo_footer .subtexto_direitos {
+
+  font-size: 12px;
+  padding-left: 128px;
+  padding-top: 28px;
+}
+
+
+.container_carrinho_produtos {
+  height: 600px;
+  width: 380px;
+  background-color: rgb(49, 48, 48);
+  border: 1px solid #ccc;
+  color: #ffffff;
+  padding: 2rem;
+  margin: 2rem auto; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  position: relative;
+  bottom: 2330px;
+  left: 440px;
+}
+
+
+.container_carrinho_produtos h1{
+  position: relative;
+  bottom: 18px;
+  font-size: 30px;
+}
+
+
+.carrinho_produto1 {
+  position: relative;
+  top: 4px;
+  width: 120px;
+  height: 120px;
+  background-color: #e4d9d9;
+  border-radius: 12px;
+}
+
+.carrinho_produto1 img {
+
+  width: 90px;
+  position: relative;
+  top: 14px;
+  left: 14px;
+}
+
+.carrinho_produto1 p {
+
+  position: relative;
+  bottom: 100px;
+  left: 140px;
+  width: 200px;
+  font-size: 14px;
+}
+
+.carrinho_produto1 .subtexto_cart_prod1 {
+
+  position: relative;
+  bottom: 90px;
+  font-size: 18px;
+}
+
+.icone_plus_carrinho_prod1 {
+
+  position: relative;
+  top: 135px;
+  left: 280px;
+}
+
+.icone_minus_carrinho_prod1 {
+
+  position: relative;
+  bottom: 221px;
+  left: 340px;
+}
+
+.carrinho_produto1 .texto_preco_carrinho_prod1 {
+
+  position: relative;
+  bottom: 180px;
+  left: 320px;
+}
+
+
+
+.carrinho_produto2 {
+  position: relative;
+  top: 30px;
+  width: 120px;
+  height: 120px;
+  background-color: #e4d9d9;
+  border-radius: 12px;
+}
+
+
+.carrinho_produto2 img {
+
+  width: 90px;
+  position: relative;
+  top: 14px;
+  left: 14px;
+}
+
+.carrinho_produto2 p {
+
+  position: relative;
+  bottom: 100px;
+  left: 140px;
+  width: 200px;
+  font-size: 14px;
+}
+
+
+.carrinho_produto2 .subtexto_cart_prod2 {
+
+  position: relative;
+  bottom: 90px;
+  font-size: 18px;
+}
+
+
+.carrinho_produto2 .texto_preco_carrinho_prod2 {
+
+  position: relative;
+  bottom: 180px;
+  left: 320px;
+}
+
+
+.icone_plus_carrinho_prod2 {
+
+  position: relative;
+  bottom: 135px;
+  left: 278px;
+}
+
+.icone_minus_carrinho_prod2 {
+
+  position: relative;
+  bottom: 221px;
+  left: 340px;
+}
+
+.texto_total_carrinho{
+
+  position: relative;
+  top: 70px;
+  left: 40px;
+  font-size: 22px;
+}
+
+.texto_total_carrinho .subtexto_total_carrinho {
+
+  position: relative;
+  left: 160px;
+  bottom: 52px;
+}
+
+.botao_checkout_carrinho {
+  position: relative;
+  top: 40px;
+  left: 100px;
+}
+
+.botao_checkout_carrinho button{
+
+  background-color: #ccc;
+  color: #1a1717;
+  height: 56px;
+  width: 190px;
+}
+
+.icone_carrinho_compras {
+
+  position: relative;
+  left: 320px;
+}
+
+.delete_prod_cart1 {
+  cursor: pointer;
+  color: rgb(230, 81, 81);
+  margin-left: 60px;
+  position: relative;
+  bottom: 52px;
+  left: 45px;
+  transition: transform 0.2s ease;
+}
+
+.delete_prod_cart1:hover {
+  transform: scale(1.1);
+}
