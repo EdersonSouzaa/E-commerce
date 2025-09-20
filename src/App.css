@@ -1344,88 +1344,91 @@ body, html {
   background-color: rgb(212, 208, 208);
 }
 
-@media (max-width: 1024px) {
-  .text_publi {
-    font-size: 72px;
+@media (max-width: 1200px) {
+  .produtos {
+    gap: 25px;
   }
 
-  .imagem_macbook_publi {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .botao_publi {
-    margin: 20px auto;
-  }
-
-  .produto1, .produto2, .produto3, .produto4,
-  .produto5, .produto6, .produto7, .produto8 {
-    width: 45%;
+  .produto {
+    width: 180px;
+    height: auto;
   }
 }
 
+/* Telas médias (até 992px) */
+@media (max-width: 992px) {
+  .pesquisar input {
+    padding: 8px 40px;
+  }
+
+  .produtos {
+    gap: 20px;
+  }
+
+  .produto {
+    width: 160px;
+  }
+}
+
+/* Tablets (até 768px) */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .menu ul {
-    flex-direction: column;
-    align-items: flex-start;
+  .pesquisar {
+    margin: 10px 0;
+    width: 100%;
+    justify-content: center;
   }
 
-  .produto1, .produto2, .produto3, .produto4,
-  .produto5, .produto6, .produto7, .produto8 {
-    width: 90%;
+  .pesquisar input {
+    width: 60%;
   }
 
-  .text_publi {
-    font-size: 42px;
-    padding: 20px;
+  .carrinho {
+    margin: 10px;
   }
 
-  .imagem_macbook_publi {
-    display: none;
+  .produtos {
+    gap: 15px;
+  }
+
+  .produto {
+    width: 45%;
+    max-width: 250px;
+    height: auto;
   }
 }
 
-@media (max-width: 425px) {
-  .text_publi {
-    font-size: 28px;
-    padding: 10px;
+/* Celulares (até 576px) */
+@media (max-width: 576px) {
+  .pesquisar input {
+    width: 70%;
+    padding: 6px 20px;
   }
 
-  .subtext_publi {
-    font-size: 14px;
-    padding: 0 10px;
+  .produtos {
+    gap: 10px;
   }
 
-  .input_barra input {
-    max-width: 90%;
+  .produto {
+    width: 90%;
+    margin: auto;
   }
+}
 
-  .icones {
-    justify-content: center;
+/* Celulares pequenos (até 400px) */
+@media (max-width: 400px) {
+  .pesquisar input {
     width: 100%;
-    margin-top: 10px;
+    padding: 5px 15px;
   }
 
-  .produto1, .produto2, .produto3, .produto4,
-  .produto5, .produto6, .produto7, .produto8 {
+  .produto {
     width: 100%;
-  }
-
-  .container_banner {
-    flex-direction: column;
-    width: 100%;
-    overflow-x: auto;
-  }
-
-  .texto_banner {
-    font-size: 20px;
-    text-align: center;
-    position: static;
+    margin: auto;
   }
 }
 
