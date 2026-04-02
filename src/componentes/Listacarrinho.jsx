@@ -1,115 +1,137 @@
 import { useState } from "react";
-import iphone_14 from "../assets/iphone_14.png";
-import ipad from "../assets/ipad.png";
-import emptyCartImage from "../assets/empty_state.png";
+import { motion, AnimatePresence } from "framer-motion";
 import { IoMdAddCircle } from "react-icons/io";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { TiDelete } from "react-icons/ti";
-import { motion, AnimatePresence } from "framer-motion";
+import { FiShoppingBag, FiArrowLeft } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
-function Listacarrinho({ mostrarCarrinho, setMostrarCarrinho }) {
-  const [produtos, setProdutos] = useState([
-    {
-      id: 1,
-      nome: "Apple Iphone 14 pro max",
-      preco: 4612.0,
-      quantidade: 1,
-      imagem: iphone_14,
-    },
-    {
-      id: 2,
-      nome: "Apple Ipad 9 2021",
-      preco: 2673.0,
-      quantidade: 1,
-      imagem: ipad,
-    },
-  ]);
+// Importe sua imagem de erro/vazio
+import emptyCartImage from "../assets/empty_state.png";
 
-  const aumentar = (id) => {
-    setProdutos((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantidade: item.quantidade + 1 } : item
-      )
-    );
+function Listacarrinho() {
+  const navigate = useNavigate();
+  const { cartItems, increaseQty, decreaseQty, removeFromCart, total } = useCart();
+
+  // Lógica de Frete: Grátis acima de R$ 999
+  const frete = total > 999 ? 0 : 29.9;
+
+  const handleCheckoutNavigation = () => {
+    if (cartItems.length === 0) return;
+    // Em vez de apenas mostrar "Sucesso", navegamos para a tela de formulários
+    navigate('/checkout');
   };
-
-  const diminuir = (id) => {
-    setProdutos((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantidade: Math.max(0, item.quantidade - 1) } : item
-      )
-    );
-  };
-
-  const removerProduto = (id) => {
-    setProdutos((prev) => prev.filter((item) => item.id !== id));
-  };
-
-  const total = produtos.reduce((acc, item) => acc + item.preco * item.quantidade, 0);
 
   return (
-    <AnimatePresence>
-      <motion.div
-        className="container_carrinho_produtos"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 20 }}
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-      >
-        <TiDelete
-          className="icone_carrinho_compras"
-          size={45}
-          onClick={() => window.history.back()}
-          style={{ cursor: "pointer", color: "#ffffff" }}
-        />
+    <section className="cart-page">
+      <div className="section-container">
+        {/* Header */}
+        <div className="cart-header">
+          <button className="cart-back-btn" onClick={() => navigate(-1)}>
+            <FiArrowLeft size={20} />
+            Voltar
+          </button>
+          <h1 className="cart-title">
+            <FiShoppingBag size={28} />
+            Meu Carrinho
+            <span className="cart-count">({cartItems.length})</span>
+          </h1>
+        </div>
 
-        <h1>Meu Carrinho</h1>
-
-        {produtos.length === 0 ? (
-          <div style={{ textAlign: "center", padding: "20px" }}>
-            <img src={emptyCartImage} alt="Carrinho vazio" style={{ width: "230px", height: "230px", marginBottom: "16px" }} />
-            <p style={{ fontSize: "18px", color: "#FFF" }}>Seu carrinho está vazio</p>
-            <p style={{ fontSize: "18px", color: "#FFF" }}>Adicione produtos para continuar</p>
-          </div>
+        {cartItems.length === 0 ? (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="cart-empty"
+          >
+            <img src={emptyCartImage} alt="Carrinho Vazio" style={{ width: 180 }} />
+            <h2>Seu carrinho está vazio</h2>
+            <p>Adicione produtos para continuar comprando.</p>
+            <button className="btn-primary" onClick={() => navigate('/')} style={{ marginTop: '20px' }}>
+              Ir para a Loja
+            </button>
+          </motion.div>
         ) : (
-          <>
-            {produtos.map((produto) => (
-              <div key={produto.id} className={`carrinho_produto${produto.id}`}>
-                <img src={produto.imagem} alt={produto.nome} />
-                <p>{produto.nome}</p>
-                <p
-                  className={`subtexto_cart_prod${produto.id}`}
-                  style={{ display: "flex", alignItems: "center", gap: "8px" }}
-                >
-                  R$ {produto.preco.toFixed(2)}
-                  <TiDelete
-                    className="delete_prod_cart1"
-                    size={28}
-                    color="red"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => removerProduto(produto.id)}
-                  />
-                </p>
-                <motion.div whileTap={{ scale: 1.05 }} transition={{ duration: 0.15 }} onClick={() => aumentar(produto.id)} style={{ cursor: "pointer" }}>
-                  <IoMdAddCircle size={30} className="icone_plus_carrinho_prod2" />
-                </motion.div>
-                <p className={`texto_preco_carrinho_prod${produto.id}`}>{produto.quantidade}</p>
-                <motion.div whileTap={{ scale: 0.95 }} transition={{ duration: 0.15 }} onClick={() => diminuir(produto.id)} style={{ cursor: "pointer" }}>
-                  <AiFillMinusCircle size={30} className="icone_minus_carrinho_prod2" />
-                </motion.div>
+          <div className="cart-layout">
+            {/* Lista de Itens */}
+            <div className="cart-items-list">
+              <AnimatePresence mode="popLayout">
+                {cartItems.map((produto) => (
+                  <motion.div
+                    key={produto.id}
+                    layout
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }}
+                    className="cart-item-card glass-card"
+                  >
+                    <div className="cart-item-image">
+                      <img
+                        src={produto.imagem}
+                        alt={produto.nome}
+                        onError={(e) => e.target.src = 'https://via.placeholder.com/150'}
+                      />
+                    </div>
+
+                    <div className="cart-item-info">
+                      <span className="cart-item-category">{produto.categoria || 'Eletrônico'}</span>
+                      <h3 className="cart-item-name">{produto.nome}</h3>
+                      <span className="cart-item-price">
+                        R$ {Number(produto.preco).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                      </span>
+                    </div>
+
+                    <div className="cart-item-controls">
+                      <button className="cart-qty-btn" onClick={() => decreaseQty(produto.id)}>
+                        <AiFillMinusCircle size={24} />
+                      </button>
+                      <span className="cart-qty-display">{produto.quantidade}</span>
+                      <button className="cart-qty-btn" onClick={() => increaseQty(produto.id)}>
+                        <IoMdAddCircle size={24} />
+                      </button>
+                    </div>
+
+                    <button className="cart-remove-btn" onClick={() => removeFromCart(produto.id)}>
+                      <TiDelete size={28} />
+                    </button>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+
+            {/* Resumo Financeiro */}
+            <aside className="cart-summary glass-card">
+              <h2 className="cart-summary-title">Resumo</h2>
+              <div className="cart-summary-rows">
+                <div className="cart-summary-row">
+                  <span>Subtotal</span>
+                  <span>R$ {total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</span>
+                </div>
+                <div className="cart-summary-row">
+                  <span>Frete</span>
+                  <span>{frete === 0 ? 'Grátis' : `R$ ${frete.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`}</span>
+                </div>
+                <div className="cart-summary-divider" />
+                <div className="cart-summary-row cart-summary-total">
+                  <span>Total</span>
+                  <span className="text-gradient">
+                    R$ {(total + frete).toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
+                  </span>
+                </div>
               </div>
-            ))}
-            <div className="texto_total_carrinho">
-              <p>Total:</p>
-              <p className="subtexto_total_carrinho">R$ {total.toFixed(2)}</p>
-            </div>
-            <div className="botao_checkout_carrinho">
-              <button>Prosseguir</button>
-            </div>
-          </>
+              <button
+                className="btn-primary"
+                style={{ width: '100%', marginTop: '20px' }}
+                onClick={handleCheckoutNavigation}
+              >
+                Finalizar Compra
+              </button>
+            </aside>
+          </div>
         )}
-      </motion.div>
-    </AnimatePresence>
+      </div>
+    </section>
   );
 }
 

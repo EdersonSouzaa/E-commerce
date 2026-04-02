@@ -1,12 +1,12 @@
-function Ofertastexto(){
-
-    return(
-        <div className="ofertas_texto">
-            <p>Cadastre-se e ganhe até <span className="ofertas_subtexto">40% OFF</span> em produtos variados</p>
-
-            <p className="ofertas_texto2">Aproveite antes que acabe</p>
-        </div>
-    )
+function Ofertastexto() {
+  return (
+    <div className="promo-banner">
+      <div className="promo-text">
+        Cadastre-se e ganhe até 40% OFF em produtos variados • Aproveite antes que acabe • Promoção de Inverno FASTSTORE • Frete grátis em compras acima de R$ 999 • Ofertas exclusivas no App • 
+        Cadastre-se e ganhe até 40% OFF em produtos variados • Aproveite antes que acabe • Promoção de Inverno FASTSTORE • Frete grátis em compras acima de R$ 999 • Ofertas exclusivas no App •
+      </div>
+    </div>
+  );
 }
 
-export default Ofertastexto
+export default Ofertastexto;

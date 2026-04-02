@@ -1,47 +1,73 @@
-
 import { IoLogoGooglePlaystore } from "react-icons/io5";
+import { FaApple, FaTwitter, FaInstagram, FaFacebook } from "react-icons/fa";
 
-import { FaApple } from "react-icons/fa";
-
-
-function Footer(){
-
-    return(
-        <div className="container_footer">
-
-
-            <p>FASTSTORE</p>
-
-
-            <p className="subtexto_footer">Baixe o nosso aplicativo seja na Apple Store como na Google Play</p>
-
-
-
-            <div className="container_googleplay">
-
-                <p>Google Play</p>
-                <IoLogoGooglePlaystore className="icone_google" size={38}/>
-
+function Footer() {
+  return (
+    <footer className="footer">
+      <div className="section-container">
+        <div className="footer-content">
+          <div className="footer-brand">
+            <div className="footer-logo">
+              <span className="fast">FAST</span>STORE
             </div>
-
-            <div className="container_applestore">
-
-                <p>Apple Store</p>
-                <FaApple className="icone_apple" size={38}/>
-
-
+            <p className="footer-text">
+              Oferecemos a melhor experiência em eletrônicos premium com entrega expressa para todo o Brasil. Qualidade e confiança que você merece.
+            </p>
+            <div className="social-links" style={{ display: 'flex', gap: '1rem' }}>
+              <FaInstagram size={20} className="icon-link" />
+              <FaTwitter size={20} className="icon-link" />
+              <FaFacebook size={20} className="icon-link" />
             </div>
+          </div>
 
-            <div className="objetivo_footer">
-                <p>Nosso objetivo é proporcionar ao cliente as melhores qualidades e entregas do produto</p>
+          <div className="footer-links-group">
+            <h4 className="footer-heading">Loja</h4>
+            <ul className="footer-links">
+              <li><a href="/" className="footer-link">Todos os Produtos</a></li>
+              <li><a href="/" className="footer-link">Lançamentos</a></li>
+              <li><a href="/" className="footer-link">Mais Vendidos</a></li>
+              <li><a href="/" className="footer-link">Ofertas</a></li>
+            </ul>
+          </div>
 
-                <p className="subtexto_direitos">CopyRight 2025 - Éderson Façanha - Todos os direitos reservados</p>
+          <div className="footer-links-group">
+            <h4 className="footer-heading">Suporte</h4>
+            <ul className="footer-links">
+              <li><a href="/" className="footer-link">Sua Conta</a></li>
+              <li><a href="/" className="footer-link">Rastrear Pedido</a></li>
+              <li><a href="/" className="footer-link">Termos de Uso</a></li>
+              <li><a href="/" className="footer-link">Privacidade</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-brand">
+            <h4 className="footer-heading">Baixe nosso App</h4>
+            <div className="footer-apps">
+              <button className="app-btn">
+                <FaApple size={24} />
+                <div style={{ textAlign: 'left' }}>
+                  <div style={{ fontSize: '0.6rem' }}>Baixar na</div>
+                  <div style={{ fontWeight: 600 }}>App Store</div>
+                </div>
+              </button>
+              <button className="app-btn">
+                <IoLogoGooglePlaystore size={24} />
+                <div style={{ textAlign: 'left' }}>
+                  <div style={{ fontSize: '0.6rem' }}>Disponível no</div>
+                  <div style={{ fontWeight: 600 }}>Google Play</div>
+                </div>
+              </button>
             </div>
-
+          </div>
         </div>
 
-
-    )
+        <div className="footer-bottom">
+          <p>© 2025 FASTSTORE. Todos os direitos reservados.</p>
+          <p>Desenvolvido por Éderson Façanha</p>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;

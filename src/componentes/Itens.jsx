@@ -1,5 +1,9 @@
 import { forwardRef } from "react";
+import { motion } from "framer-motion";
+import { CiBookmarkPlus } from "react-icons/ci";
+import { useCart } from '../context/CartContext';
 
+// Importação dos assets
 import iphone_14 from "../assets/iphone_14.png";
 import ipad from "../assets/ipad.png";
 import applewatch from "../assets/relogio.png";
@@ -9,136 +13,62 @@ import verde_notebook from "../assets/verde_notebook.png";
 import galaxy_watch from "../assets/galaxy_watch.png";
 import camera from "../assets/camera.png";
 
-import { CiBookmarkPlus } from "react-icons/ci";
-import { FiShoppingCart } from "react-icons/fi";
+const products = [
+  { id: 1, nome: "iPhone 14 Pro Max", categoria: "Smartphones", preco: 3760.00, imagem: iphone_14, description: "128GB - Deep Purple" },
+  { id: 2, nome: "iPad 9 2021", categoria: "Tablets", preco: 2899.00, imagem: ipad, description: "64GB - Space Gray" },
+  { id: 3, nome: "Apple Watch Series 9", categoria: "Wearables", preco: 570.00, imagem: applewatch, description: "Starlight Aluminium" },
+  { id: 4, nome: "Pocket Cinema 6K", categoria: "Cameras", preco: 10200.00, imagem: camera, description: "Professional 6K Video" },
+  { id: 5, nome: "Samsung Buds Pro", categoria: "Audio", preco: 699.00, imagem: fones_samsung, description: "Active Noise Cancelling" },
+  { id: 6, nome: "Asus ROG Pro", categoria: "Laptops", preco: 5999.00, imagem: asus, description: "Gaming Monster" },
+  { id: 7, nome: "Lenovo G4 Ultra", categoria: "Laptops", preco: 4599.00, imagem: verde_notebook, description: "OLED Display" },
+  { id: 8, nome: "Galaxy Watch 6", categoria: "Wearables", preco: 299.00, imagem: galaxy_watch, description: "Health & Fitness" },
+];
 
 const Itens = forwardRef((props, ref) => {
+  const { addToCart } = useCart();
+
   return (
-    <div className="container_itens" ref={ref}>
-      <div className="produto1">
-        <div className="container_like_prod1">
-          <CiBookmarkPlus size={30} className="icone_like_prod1" />
-        </div>
-        <div className="container_cart_prod1">
-          <FiShoppingCart size={30} className="icone_cart_prod1" />
-        </div>
-        <img src={iphone_14} alt="" />
-        <p>Apple Iphone 14 pro max</p>
-        <p className="texto_iphone_roxo">
-          <span className="text_bold_iphone">128GB</span> Cor Roxa
-        </p>
-        <div className="botao_iphone_roxo">
-          <button>Ver detalhes</button>
-        </div>
-      </div>
+    <section className="section-container" ref={ref} style={{ paddingBottom: '4rem' }}>
+      <div className="product-grid">
+        {products.map((product, index) => (
+          <motion.div
+            key={product.id}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
+            viewport={{ once: true }}
+            className="glass-card product-card"
+          >
+            <div className="product-image-container">
+              {/* Lendo .imagem corretamente */}
+              <img src={product.imagem} alt={product.nome} className="product-image" />
+            </div>
 
-      <div className="produto2">
-        <div className="container_like_prod1">
-          <CiBookmarkPlus size={30} className="icone_like_prod1" />
-        </div>
-        <div className="container_cart_prod2">
-          <FiShoppingCart size={30} className="icone_cart_prod2" />
-        </div>
-        <img src={ipad} alt="" />
-        <p>Apple iPad 9 2021</p>
-        <p className="texto_ipad_silver">
-          <span className="bold_ipad">64GB</span> Cor Roxa
-        </p>
-        <div className="botao_iphone_roxo">
-          <button>Ver detalhes</button>
-        </div>
-      </div>
+            <div className="product-info">
+              <span className="product-category">{product.categoria}</span>
+              <h3 className="product-name">{product.nome}</h3>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{product.description}</p>
+              {/* Exibição formatada do preço */}
+              <span className="product-price">
+                {product.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+              </span>
+            </div>
 
-      <div className="produto3">
-        <div className="container_like_prod3">
-          <CiBookmarkPlus size={30} className="icone_like_prod3" />
-        </div>
-        <div className="container_cart_prod3">
-          <FiShoppingCart size={30} className="icone_cart_prod3" />
-        </div>
-        <img src={applewatch} alt="" />
-        <p>Apple watch series 9</p>
-        <p className="texto_applewatch_aluminium">Starlight Aluminium</p>
-        <div className="botao_relogio_cinza">
-          <button>Ver detalhes</button>
-        </div>
+            <div className="product-actions">
+              <button
+                className="btn-add-cart"
+                onClick={() => addToCart(product)}
+              >
+                Adicionar
+              </button>
+              <button className="btn-wishlist">
+                <CiBookmarkPlus size={20} />
+              </button>
+            </div>
+          </motion.div>
+        ))}
       </div>
-
-      <div className="produto4">
-        <div className="container_like_prod4">
-          <CiBookmarkPlus size={30} className="icone_like_prod4" />
-        </div>
-        <div className="container_cart_prod4">
-          <FiShoppingCart size={30} className="icone_cart_prod4" />
-        </div>
-        <img src={camera} alt="" />
-        <p>Blackmagic pocket cinema</p>
-        <p className="texto_camera_preta">Câmera 6K</p>
-        <div className="botao_camera_preta">
-          <button>Ver detalhes</button>
-        </div>
-      </div>
-
-      <div className="produto5">
-        <div className="container_like_prod4">
-          <CiBookmarkPlus size={30} className="icone_like_prod4" />
-        </div>
-        <div className="container_cart_prod4">
-          <FiShoppingCart size={30} className="icone_cart_prod4" />
-        </div>
-        <img src={fones_samsung} alt="" />
-        <p>Samsung G5 pro</p>
-        <p className="texto_fone_cinza">Cor Cinza</p>
-        <div className="botao_fone_cinza">
-          <button>Ver detalhes</button>
-        </div>
-      </div>
-
-      <div className="produto6">
-        <div className="container_like_prod6">
-          <CiBookmarkPlus size={30} className="icone_like_prod6" />
-        </div>
-        <img src={asus} alt="" />
-        <p>Asus rog pro</p>
-        <p className="texto_notebook_preto">Cor preta</p>
-        <div className="botao_notebook_red">
-          <button>Ver detalhes</button>
-        </div>
-        <div className="container_cart_prod6">
-          <FiShoppingCart size={30} className="icone_cart_prod6" />
-        </div>
-      </div>
-
-      <div className="produto7">
-        <div className="container_like_prod7">
-          <CiBookmarkPlus size={30} className="icone_like_prod7" />
-        </div>
-        <img src={verde_notebook} alt="" />
-        <p>Lenovo G4 ultra</p>
-        <p className="texto_notebook_verde">Cor Cinza</p>
-        <div className="botao_notebook_verde">
-          <button>Ver detalhes</button>
-        </div>
-        <div className="container_cart_prod7">
-          <FiShoppingCart size={30} className="icone_cart_prod7" />
-        </div>
-      </div>
-
-      <div className="produto8">
-        <div className="container_like_prod8">
-          <CiBookmarkPlus size={30} className="icone_like_prod8" />
-        </div>
-        <img src={galaxy_watch} alt="" />
-        <p>Samsung Galaxy watch 6</p>
-        <p className="texto_relogio_verde">Cor Cinza</p>
-        <div className="botao_relogio_verde">
-          <button>Ver detalhes</button>
-        </div>
-        <div className="container_cart_prod8">
-          <FiShoppingCart size={30} className="icone_cart_prod8" />
-        </div>
-      </div>
-    </div>
+    </section>
   );
 });
 

@@ -1,56 +1,55 @@
-import { FaSearch, FaShoppingCart } from "react-icons/fa";
-import { MdAccountCircle } from "react-icons/md";
+import { FaSearch, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useCart } from "../context/CartContext";
 
-import logo from "../assets/favicon_cart.png"
+function Navegacao({ onProdutosClick, onSobreClick, onContatoClick }) {
+  const { itemCount } = useCart();
 
-function Navegacao({onProdutosClick, onSobreClick, onContatoClick}) {
-  
   return (
-    <div className="navbar">
-      <div className="logo">
-        <p className="texto_logo">
-          <span className="fast">FAST</span>STORE
-        </p>
-      </div>
+    <header className="navbar">
+      <div className="section-container nav-content">
+        <Link to="/" className="logo">
+          <motion.p 
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            className="texto_logo"
+          >
+            <span className="fast">FAST</span>STORE
+          </motion.p>
+        </Link>
 
-      <div className="menu">
-        <nav>
+        <nav className="menu">
           <ul>
-            <li><Link to="/" className="texto_home">Home</Link></li>
-            <li onClick={onProdutosClick} style={{ cursor: 'pointer' }} className="produtos">Produtos</li>
-            <li onClick={onSobreClick} style={{ cursor: 'pointer' }}>Sobre</li>
-            <li onClick={onContatoClick} style={{ cursor: 'pointer' }}>Contato</li>
-            <li className="conta">Conta</li>
+            <li><Link to="/">Home</Link></li>
+            <li onClick={onProdutosClick}>Produtos</li>
+            <li onClick={onSobreClick}>Sobre</li>
+            <li onClick={onContatoClick}>Contato</li>
           </ul>
         </nav>
-      </div>
 
-      <div className="input_barra">
-        <input
-          type="text"
-          placeholder="  Digite para pesquisar"
-          className="texto_input"
-        />
-      </div>
+        <div className="nav-actions">
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder="Pesquisar..."
+              className="search-input"
+            />
+            <FaSearch className="search-icon" />
+          </div>
 
-      <div className="container_pesquisar">
-        <FaSearch size={23} className="icone_pesquisar" />
+          <div className="action-icons">
+            <Link to="/cart" className="icon-link">
+              <FaShoppingCart size={20} />
+              <span className="cart-badge">{itemCount}</span>
+            </Link>
+            <button className="icon-link">
+              <FaUserCircle size={22} />
+            </button>
+          </div>
+        </div>
       </div>
-
-      <div className="icone_carrinho">
-        <Link to="/cart">
-          <FaShoppingCart
-            size={24}
-            style={{ cursor: "pointer", color: "#FFF" }}
-          />
-        </Link>
-      </div>
-
-      <div className="icone_conta">
-        <MdAccountCircle size={28} />
-      </div>
-    </div>
+    </header>
   );
 }
 
